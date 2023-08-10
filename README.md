@@ -8,7 +8,7 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 
-## How to deploy to github pages
+## How to deploy to github pages using vite
 **Set Up GitHub Repository:**
 Make sure you have a GitHub repository for your project. If not, create one on GitHub.
 
@@ -16,19 +16,23 @@ Make sure you have a GitHub repository for your project. If not, create one on G
 The gh-pages package simplifies the deployment process. Install it as a development dependency:
 ### npm install gh-pages --save-dev
 
-**Update package.json:**
-Open your package.json file and add the following lines at the top level:
-### "homepage": "https://<username>.github.io/<repository-name>",
-Replace <username> with your GitHub username and <repository-name> with the name of your repository.
+**Update the package.json file**
+The ‘gh-pages’ package uses the homepage field in the package.json file to determine where to deploy your app. To update the package.json file, follow these steps:
 
-**Modify package.json Scripts:**
-Still in your package.json, add the following scripts:
+1. Add a homepage field with the URL of your GitHub repository in the following format:
 
-### "scripts": {
-### "predeploy": "npm run build",
-### "deploy": "gh-pages -d build",
-###  // ...
-### }
+“homepage”: https://<your-github-username>.github.io/<your-repository-name>/
+
+2. In the scripts tag add:
+
+“predeploy”: “npm run build”,
+
+“deploy”: “gh-pages -d dist”.
+
+3. Save the changes.
+
+**Update the vite.config.js file**
+Add base: “/<repo>/”, to vite.config.js, in my example it would be base: “/react-project/”
 
 **Build the App:**
 Generate a production build of your React app:
