@@ -2,6 +2,7 @@
 .app{
 	font-family:'Inter';
 	width: 100%;
+	padding-top: 20px;
 }
 
 .content{
@@ -38,15 +39,15 @@ a {
 .icon1{
 	display: block;
 	position: absolute;
-	top: 0;
+	top: 2;
 	right: 200px;
 }
 
 .icon2{
 	display: none;
 	position: absolute;
-	top: 0;
-	right:0;
+	top: 2;
+	right:10px;
 }
 
 footer>.logo1>img{
@@ -57,15 +58,28 @@ footer>.logo2>img{
 	width: 100px;
 }
 
-.box{
-	padding: 24px 32px;
-	border-radius: 8px;
+
+ul{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin:  0 20px;
+	padding: 0px;
+}
+
+li{
+	list-style: none;
 	border: 1px solid #EAECF0;
 	background: #EAECF0;
+	width: 100%;
+	padding: 24px 32px;
+	border-radius: 8px;
 	display: flex;
 	justify-content: center;
 	margin-top: 15px;
+	cursor: pointer;
 }
+
 
 .socialIcon{
 	margin-top: 30px;
@@ -84,7 +98,7 @@ footer{
 }
 
 footer .footerText{
-	margin-left: 40px;
+	margin-left: 60px;
 	padding: 20px 0;
 	color: #667085;
 	text-align: center;
