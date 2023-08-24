@@ -46,3 +46,6 @@ Deploy your app to GitHub Pages using the npm run deploy command:
 
 **Access Your Deployed App:**
 Once the deployment is successful, you can access your deployed React app at the URL: https://<username>.github.io/<repository-name>.
+
+**Resource:**
+https://medium.com/@badreddine.boudaoud21/create-a-react-app-with-vite-and-deploy-it-on-github-48b82e19f821
